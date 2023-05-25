@@ -1,0 +1,683 @@
+:root {
+    /* primary theme > dark mode */
+    --primary-bg-color: rgb(33, 37, 41);
+    --primary-text-color: #fff;
+
+    /* secondary theme > light mode */
+    --secondary-bg-color: #f8f9fa;
+    --secondary-text-color: #000;
+
+    /*navbar color > dark mode*/
+    --navbar-bg-color: #171717;
+
+
+    /*navbar color > light mode*/
+    --navbar-bg-color-light: #fff;
+
+
+    /* card color > dark mode */
+    --card-bg-color: #171717;
+
+
+    /* card color > light mode */
+    --card-bg-color-light: #fff;
+
+    /*border-bottom > ligt mode*/
+    --border-bottom-light: #e8e8e8;
+
+    /* selected color */
+    --selected-color: rgb(59, 63, 67);
+
+    /* scroll bar colors */
+
+    --scrollbar-bg-color: #171717;
+    --scrollbar-thumb-color: rgb(59, 63, 67);
+    --scrollbar-thumb-hover-color: rgb(109, 109, 109);
+    ---scrollbar-track-border-color: rgb(59, 63, 67);
+
+
+}
+
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: var(--scrollbar-bg-color);
+    border-left: 1px solid var(---scrollbar-track-border-color);
+
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb-color);
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover-color);
+}
+
+.text-mode {
+    background: var(--primary-bg-color);
+    color: var(--primary-text-color);
+
+}
+
+.text-mode-card {
+    transform: translateY(0px) !important;
+    transition: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.buttonStyle {
+    position: absolute;
+    top: 0px;
+    right: 82.8px;
+    color: white;
+    background-color: var(--primary-bg-color);
+    padding: 23.4px;
+    border-bottom: 1px solid var(--selected-color);
+    border-top: 1px solid var(--selected-color);
+    border-right: 0px;
+    border-left: 0px;
+
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Ubuntu";
+    font-size: 16px;
+}
+
+.buttonStyle:hover {
+    background-color: var(--selected-color);
+    transform: translateY(5px);
+    border-radius: 15px;
+    transition: all 0.3s ease-in;
+}
+
+.buttonStyle-light {
+    background-color: var(--secondary-bg-color);
+    color: var(--secondary-text-color);
+
+
+    border-bottom: 1px solid var(--border-bottom-light);
+    border-top: 1px solid var(--border-bottom-light);
+    border-right: 0px;
+    border-left: 0px;
+}
+
+.buttonStyle-light:hover {
+    background-color: silver !important;
+}
+
+.battery-optimized {
+
+    font-size: 16px;
+    background-color: black;
+
+}
+
+
+.battery-optimized .card {
+    background-color: black;
+    border: silver solid 2px !important;
+    box-shadow: none;
+    transition: none !important;
+    transform: translateY(0px) !important;
+}
+
+.battery-optimized .card-light {
+    background-color: white;
+    border: silver solid 2px !important;
+    box-shadow: none;
+    transition: none !important;
+    transform: translateY(0px) !important;
+
+}
+
+body {
+    background-color: var(--primary-bg-color);
+    font-family: "Inconsolata";
+    color: var(--primary-text-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+    margin-top: 0px;
+
+    overflow-x: hidden;
+
+    color-scheme: dark;
+}
+
+.light-mode {
+    background-color: var(--secondary-bg-color);
+    color: var(--secondary-text-color);
+}
+
+
+hr {
+    color: var(--border-bottom-light);
+    width: 40%;
+}
+
+
+.navbar {
+    font-family: "Ubuntu";
+    background-color: var(--navbar-bg-color);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    border-bottom: 1px solid rgb(59, 63, 67);
+    z-index: 1;
+}
+
+.navbar-light {
+    background-color: var(--navbar-bg-color-light);
+    border-bottom: 1px solid rgb(232, 232, 232);
+}
+
+.nav-item {
+    color: var(--primary-text-color);
+    text-decoration: none;
+    margin: 0px 10px;
+    font-size: 16px;
+    padding: 16px;
+}
+
+.nav-item-light {
+    color: var(--secondary-text-color);
+}
+
+.nav-item:hover {
+    text-decoration: underline;
+    color: gray;
+}
+
+.nav-item:active {
+    text-decoration: underline;
+    color: gray;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+h3 {
+    text-align: justify
+}
+
+p {
+    text-align: justify;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 16px;
+    font-family: "inconsolata";
+    /* add line space of 1.5*/
+    line-height: 1.5;
+
+}
+
+.card {
+    /* create a card */
+    background-color: var(--card-bg-color);
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 15px;
+
+    width: 40%;
+    /* make the card responsive */
+    max-width: 100%;
+
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+
+
+}
+
+.card-full {
+    position: fixed;
+    top: 55px;
+
+    width: 80%;
+    height: 80%;
+    z-index: 2;
+    overflow-y: scroll;
+
+    transition: all 0.3s ease-in;
+    cursor: default;
+    border-radius: 0px;
+}
+
+
+
+.card-full:hover {
+    transform: translateY(0px) !important;
+    transition: all 0.3s ease-in;
+    /* box-shadow: none !important; */
+
+}
+
+
+.card-light {
+    background-color: var(--card-bg-color-light);
+}
+
+
+.card:hover {
+    /* smooth pop up and down effect with small box shadow*/
+    transform: translateY(-5px);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 1);
+    transition: all 0.3s ease-in;
+    border: 1px solid rgb(59, 59, 59);
+}
+
+.card-light.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 3px 3px 10px silver;
+    transition: all 0.3s ease-in;
+}
+
+
+.card-title {
+    /* title of the card */
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.date {
+    /* date of the card */
+    font-size: 14px;
+    margin: 0px;
+    text-align: center;
+    letter-spacing: 1.5px;
+    font-weight: 100;
+    /* color: silver; */
+}
+
+.divider {
+    color: white;
+    width: 85%;
+}
+
+#description {
+    /* description of the card */
+    /* font-size: 16px; */
+    font-family: "inconsolata";
+    /* margin-bottom: 10px; */
+    text-align: center;
+    /* letter-spacing: 1.5px; */
+}
+
+.description-full {
+    font-size: 16px;
+    font-family: "inconsolata" !important;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    text-align: justify;
+
+
+}
+
+.header {
+    /* header of the card */
+
+    margin: 2.5%;
+    font-family: "Ubuntu";
+    text-align: center;
+    font-weight: bold;
+
+
+}
+
+.battery-container {
+    position: fixed;
+    top: 10px;
+    right: 300px;
+    z-index: 9999;
+}
+
+
+
+.logo {
+    /* center the logo in page */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    height: 25%;
+    margin-top: 5%;
+    position: relative;
+    transition: all .7s ease-out;
+}
+
+
+
+.logo:hover {
+    transform: rotate(360deg);
+    color: rgb(137, 11, 11);
+    transition: all 0.7 ease-in;
+}
+
+.tagline {
+    font-size: 16px;
+    font-family: "inconsolata";
+    margin: 0px;
+    text-align: center;
+    letter-spacing: 1.5px;
+    font-weight: 100;
+    color: silver;
+    font-style: italic;
+}
+
+.page-header {
+    /* margin: 0px; */
+    margin-top: 10%;
+    margin-bottom: 2.5%;
+    text-align: center;
+}
+
+.sunIconStyle {
+
+    position: absolute;
+    right: 20px;
+    top: 0px;
+
+    border-radius: 5px;
+    padding: 20px;
+    background-color: var(--primary-bg-color);
+
+    border-right: 1px solid var(--selected-color);
+    border-bottom: 1px solid var(--selected-color);
+    border-top: 1px solid var(--selected-color);
+
+
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.sunIconStyle:hover {
+
+    background-color: var(--selected-color);
+    transform: translateY(5px);
+    border-radius: 15px;
+    transition: all 0.3s ease-in;
+}
+
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: flex;
+}
+
+.moonIconStyle {
+
+    position: absolute;
+    right: 20px;
+    top: 0px;
+
+    padding: 20px;
+
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
+
+    border-right: 1px solid rgb(232, 232, 232);
+    border-bottom: 1px solid rgb(232, 232, 232);
+    border-top: 1px solid rgb(232, 232, 232);
+
+
+    background-color: var(--secondary-bg-color);
+
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+
+
+}
+
+.moonIconStyle:hover {
+
+    transform: translateY(5px);
+    transition: all 0.3s ease-in;
+    background-color: #c0c0c0;
+}
+
+
+.article-img {
+    width: 50%;
+    height: 50%;
+    border-radius: 15px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 5%;
+    margin-top: 5%;
+
+}
+
+.article-heading {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    font-family: "Ubuntu";
+    margin-left: 10%;
+    text-align: justify;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid var(--border-bottom-light);
+    font-size: 20px;
+    color: var(--text-color);
+    font-family: "inconsolata";
+    transition: all 0.3s ease-out;
+}
+
+th {
+    font-family: "ubuntu";
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid var(--border-bottom-light);
+    font-size: 22px;
+    color: var(--text-color);
+}
+
+td:hover {
+    background-color: var(--selected-color);
+    color: var(--text-color);
+    transition: all 0.3s ease-in;
+}
+
+.dropbtn {
+    background-color: var(--primary-bg-color);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-family: "ubuntu";
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--selected-color);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.battrybuttonStyle {
+    position: absolute;
+    top: 0px;
+    right: 260px;
+    color: white;
+    background-color: var(--primary-bg-color);
+    padding: 23.4px;
+
+    border-radius: 5px;
+
+    border-left: 1px solid var(--selected-color);
+    border-bottom: 1px solid var(--selected-color);
+    border-top: 1px solid var(--selected-color);
+
+    border-right: 0px;
+
+    cursor: pointer;
+    font-family: "Ubuntu";
+    font-size: 16px;
+
+
+}
+
+.battrybuttonStyle:hover {
+    background-color: var(--selected-color);
+    border-radius: 15px;
+    transform: translateY(5px);
+    transition: all 0.3s ease-in;
+}
+
+.battrybuttonStyle-light {
+    background-color: var(--secondary-bg-color);
+    color: var(--secondary-text-color);
+
+    border-left: 1px solid var(--border-bottom-light);
+    border-bottom: 1px solid var(--border-bottom-light);
+    border-top: 1px solid var(--border-bottom-light);
+    border-right: 0px;
+}
+
+.battrybuttonStyle-light:hover {
+    background-color: silver !important;
+    border-radius: 15px;
+    transform: translateY(5px);
+    transition: all 0.3s ease-in;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    body {
+
+        width: 90%;
+        overflow-x: hidden;
+
+    }
+
+    .moonIconStyle,
+    .sunIconStyle {
+        top: 51.8px;
+        right: 5px;
+        padding: 10.5px;
+
+        border-left: 0px !important;
+        border-left: 1px solid var(---scrollbar-track-border-color);
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        transform: translateY(0px) !important;
+        transition: none !important;
+        border-top-right-radius: 0px !important;
+        border-top-left-radius: 0px !important;
+        border-top: 0px;
+    }
+
+    .buttonStyle {
+        top: 5px;
+        padding: 14px;
+        right: 5px;
+        text-overflow: o;
+        transform: translateY(0px) !important;
+        transition: none !important;
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-right: 1px solid var(---scrollbar-track-border-color);
+        border-bottom: 0px !important;
+    }
+
+    .card {
+        text-align: center;
+        width: 80%;
+    }
+
+    .card-full {
+        width: 85%;
+        height: 85%;
+        /* margin-top: 50%; */
+        z-index: 2;
+    }
+
+    hr {
+        width: 80%;
+    }
+
+    .navbar {
+        text-align: left;
+    }
+
+    .article-img {
+        width: 80%;
+        height: 80%;
+    }
+
+    #battery-button {
+
+        top: 52px;
+        right: 40px;
+        border-top: 0px;
+        padding: 13.5px;
+
+
+        transform: translateY(0px) !important;
+        transition: none !important;
+
+    }
+}
+
+@media only screen and (max-height: 575.98px) and (orientation: landscape) {
+    .navbar {
+        text-align: left;
+    }
+}
